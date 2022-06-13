@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Heading, Layer, Text } from "grommet";
+import { Box, Button, Heading, Layer, Text, Grid } from "grommet";
 
 export const GetNumber = () => {
 	const [numberOne, setNumberOne] = useState("");
@@ -51,6 +51,50 @@ export const GetNumber = () => {
 
 	return (
 		<Box align="center" pad="xsmall" direction="row" gap="xsmall">
+			<Grid
+				rows={['xsmall', 'xsmall', 'xsmall', 'xsmall', 'xsmall']}
+				columns={['small', 'xsmall']}
+				gap="xxsmall"
+				areas={[
+					{ name: 'header', start: [0, 0], end: [1, 0] },
+					{ name: 'firstrow', start: [0, 1], end: [0, 1]},
+					{ name: 'secondrow', start: [0, 2], end: [0, 2] },
+					{ name: 'thridrow', start: [0, 3], end: [0, 2] },
+					{ name: 'fourthrow', start: [0, 4], end: [1, 1] },
+					{ name: 'clear', start: [1, 4], end: [4, 1] },
+				]}
+			>
+				<Box align="center" pad="xsmall" direction="column" gap="xsmall" gridArea="header">
+					<Heading level="2" textAlign="center">{numberOne}{operator}{numberTwo}</Heading>
+				</Box>
+				<Box align="center" pad="small" direction="row" gap="xsmall" gridArea="firstrow">
+					<Button label={'7'} onClick={() => handleInput('7')}/>
+					<Button label={'8'}onClick={() => handleInput('8')}/>
+					<Button label={'9'} onClick={() => handleInput('9')}/>
+					<Button label={'÷'} onClick={() => handleClick(' ÷ ')}/>
+				</Box>
+				<Box align="center" pad="small" direction="row" gap="xsmall" gridArea="secondrow">
+					<Button label={'4'} onClick={() => handleInput('4')}/>
+					<Button label={'5'} onClick={() => handleInput('5')}/>
+					<Button label={'6'} onClick={() => handleInput('6')}/>
+					<Button label={'×'} onClick={() => handleClick(' × ')}/>
+				</Box>
+				<Box align="center" pad="small" direction="row" gap="xsmall" gridArea="thirdrow">
+					<Button label={'1'} onClick={() => handleInput('1')}/>
+					<Button label={'2'} onClick={() => handleInput('2')}/>
+					<Button label={'3'} onClick={() => handleInput('3')}/>
+					<Button label={'-'} onClick={() => handleClick(' - ')}/>
+				</Box>
+				<Box align="center" pad="small" direction="row" gap="xsmall" gridArea="fourthrow">
+					<Button label={'0'} onClick={() => handleInput('0')}/>
+					<Button label={'.'} onClick={() => handleInput('.')}/>
+					<Button label={'='} primary="true" onClick={() => handleSubmit()}/>
+					<Button label={'+'} onClick={() => handleClick(' + ')}/>
+				</Box>
+			</Grid>
+
+
+
 			<Box align="center" pad="xsmall" direction="column" gap="xsmall">
 				<Heading level="2" textAlign="center">{numberOne}{operator}{numberTwo}</Heading>
 				<Box align="center" pad="small" direction="row" gap="xsmall">
