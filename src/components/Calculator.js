@@ -6,14 +6,19 @@ export const Calculator = () => {
 	return (
 		<Box 
             align="center"
+            background="white"
             alignSelf="center"
             alignContent="center"
-            pad="large"
-            background="white"
-            gap="small"
+            pad="xlarge"
+            gap="medium"
             justify="center"
             margin="small"
-            round="medium">
+            round="medium"
+            elevation="small"
+            overflow="auto"
+            direction="column"
+            width="large"
+            >
                 <GetNumber />
 		</Box>
 	);

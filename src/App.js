@@ -1,5 +1,5 @@
 import React from "react";
-import { Grommet } from "grommet";
+import { Box, Grommet } from "grommet";
 import Theme from "./theme";
 
 import Banner from "./components/Banner";
@@ -9,8 +9,10 @@ function App() {
 	return (
 		<div className="App">
 			<Grommet theme={Theme} full={true}>
-				<Banner />
-				<Calculator />
+				<Box gap="medium">
+					<Banner />
+					<Calculator />	
+				</Box>
 			</Grommet>
 		</div>
 	);
