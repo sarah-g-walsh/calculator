@@ -3,19 +3,19 @@ import { Box, Grommet } from "grommet";
 import Theme from "./theme";
 
 import Banner from "./components/Banner";
-import  Calculator from "./components/Calculator";
+import Calculator from "./components/Calculator/Calculator";
 
 function App() {
-	return (
-		<div className="App">
-			<Grommet theme={Theme} full={true}>
-				<Box gap="medium">
-					<Banner />
-					<Calculator />	
-				</Box>
-			</Grommet>
-		</div>
-	);
+    return (
+        <div className="App">
+            <Grommet theme={Theme} full={true}>
+                <Banner />
+                <Box pad="large" span>
+                    <Calculator />
+                </Box>
+            </Grommet>
+        </div>
+    );
 }
 
 export default App;
