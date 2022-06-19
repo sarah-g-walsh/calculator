@@ -125,6 +125,7 @@ export const Calculator: React.FC = (): React.ReactElement => {
               direction="row"
               gap="xsmall"
               gridArea={digit.name}
+              key={digit.name}
             >
               <Button
                 label={digit.sign}
@@ -142,6 +143,7 @@ export const Calculator: React.FC = (): React.ReactElement => {
               direction="row"
               gap="xsmall"
               gridArea={operator.name}
+              key={operator.name}
             >
               <Button
                 label={operator.sign}
