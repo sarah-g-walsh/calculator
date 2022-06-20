@@ -2,11 +2,10 @@
 // contains a title and a link to github
 
 import React from "react";
-import { Header, Nav, Anchor, Heading, Box } from "grommet";
+import { Header, Anchor, Heading, Box } from "grommet";
 import { Github } from "grommet-icons";
 
-
-const Banner = () => {
+const Banner: React.FC = (): React.ReactElement => {
   return (
     <Header
       elevation="small"
@@ -21,14 +20,12 @@ const Banner = () => {
           Calculator
         </Heading>
       </Box>
-      <Nav direction="row">
-        <Anchor
-          label="GitHub"
-          href="https://github.com/sarah-g-walsh/noughts-and-crosses"
-          color="text-strong"
-          icon={<Github />}
-        />
-      </Nav>
+      <Anchor
+        label="GitHub"
+        href="https://github.com/sarah-g-walsh/noughts-and-crosses"
+        color="text-strong"
+        icon={<Github />}
+      />
     </Header>
   );
 };
