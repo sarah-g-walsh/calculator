@@ -16,6 +16,6 @@ const App: React.FC = (): React.ReactElement => {
       </Grommet>
     </div>
   );
-}
+};
 
 export default App;
