@@ -4,7 +4,7 @@ import Theme from "./theme";
 
 import Banner from "./components/Banner";
 import Calculator from "./components/Calculator/Calculator";
-import Sidebar from "./components/Calculator/Sidebar";
+import Sidebar from "./components/Sidebar";
 
 const App: React.FC = (): React.ReactElement => {
   const [showSidebar, setShowSidebar] = useState(false);

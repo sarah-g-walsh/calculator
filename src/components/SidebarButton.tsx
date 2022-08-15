@@ -27,8 +27,9 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({
         icon={icon}
         label={label}
         onClick={() => window.open(sidebarurl, "_self")}
+        plain
+        hoverIndicator
       >
-        <Box></Box>
       </Button>
     </Box>
   );

@@ -5,16 +5,13 @@ import { Sidebar, Box, Spinner } from "grommet";
 import { Home, CaretNext } from "grommet-icons";
 
 import SidebarButton from "./SidebarButton";
-import { HOME_URL } from "../../constants/constants";
+import { HOME_URL } from "../constants/constants";
 
 const HomepageSidebar: React.FC = (): React.ReactElement => {
   const [items, setItems] = React.useState([
     { RecordId: "", Name: "", URL: "" },
   ]);
   const [load, setLoad] = React.useState(true);
-
-  const PROJECT_ENDPOINT =
-    "https://qis6el6yah.execute-api.eu-west-1.amazonaws.com/";
 
   React.useEffect(() => {
     const request = new XMLHttpRequest();
@@ -33,8 +30,7 @@ const HomepageSidebar: React.FC = (): React.ReactElement => {
     };
     request.timeout = 10000;
     request.responseType = "json";
-    // request.open("GET", process.env.PROJECT_ENDPOINT);
-    request.open("GET", PROJECT_ENDPOINT);
+    request.open("GET", process.env.REACT_APP_PROJECT_ENDPOINT as string);
     request.send();
   }, []);
 
