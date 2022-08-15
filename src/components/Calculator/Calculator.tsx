@@ -1,3 +1,7 @@
+// component that takes a number input from a button press and an operator input from a button press
+// component then outputs the answer of the calculation, which can then be operated on
+// the output can be cleared with a button press
+
 import React, { useState } from "react";
 import { Box, Heading, Grid } from "grommet";
 import { GRID_AREAS, GRID_COLUMNS, GRID_ROWS } from "./Calculator.styles";
@@ -84,7 +88,7 @@ export const Calculator: React.FC = (): React.ReactElement => {
       alignContent="center"
       alignSelf="center"
       pad="xsmall"
-      margin="small"
+      margin="medium"
       gap="xsmall"
       direction="row"
       background="white"

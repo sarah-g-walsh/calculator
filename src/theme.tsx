@@ -3,10 +3,11 @@ const Theme = {
     colors: {
       brand: "#70a9a4",
       secondarybrand: "#94bebb",
+      darkbrand: "#7c8a89",
       accent: "#a97075",
       secondaryaccent: "#92a970",
       background: "#edf4f4",
-      darkbackground: "#dfe5e5",
+      darkbackground: "#c4c8c8",
       lightbackground: "#f3f5f5",
       white: "#ffffff",
       red: "#ea6262",

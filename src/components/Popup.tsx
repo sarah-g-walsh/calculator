@@ -1,3 +1,5 @@
+// component for popup that displays if there is an error with the user's input
+
 import React from "react";
 import { Box, Button, Heading, Layer, Text } from "grommet";
 import { Close } from "grommet-icons";
@@ -13,6 +15,10 @@ const Popup: React.FC<PopupProps> = ({
   message,
   setShowError,
 }): React.ReactElement => {
+  //args:
+  //  title [string]: title that shows on the popup window
+  // message [string]: error message
+  // setShowError [boolean]: setter that sets whether or not the popup should display to the user
   return (
     <Layer
       onEsc={() => setShowError(false)}
